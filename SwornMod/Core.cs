@@ -2,8 +2,6 @@
 using HarmonyLib;
 using Il2Cpp;
 using UnityEngine;
-using Il2CppBehaviorDesigner.Runtime;
-using Il2CppCoffee.UIParticleExtensions;
 
 [assembly: MelonInfo(typeof(Sworn_ArcadeBlade_DirectionFix.Core), "Sworn_ArcadeBlade_DirectionFix", "1.0.0", "Vercility", null)]
 [assembly: MelonGame("Windwalk Games", "SWORN")]
