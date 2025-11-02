@@ -5,10 +5,11 @@ using UnityEngine;
 using Il2CppBehaviorDesigner.Runtime;
 using Il2CppCoffee.UIParticleExtensions;
 
-[assembly: MelonInfo(typeof(SwornMod.Core), "SwornMod", "1.0.0", "Vercility", null)]
+[assembly: MelonInfo(typeof(Sworn_ArcadeBlade_DirectionFix.Core), "Sworn_ArcadeBlade_DirectionFix", "1.0.0", "Vercility", null)]
 [assembly: MelonGame("Windwalk Games", "SWORN")]
 
-namespace SwornMod
+namespace Sworn_ArcadeBlade_DirectionFix
+
 {
     public class Core : MelonMod
     {
@@ -24,11 +25,11 @@ class Patch
 {
     static void Prefix(ArcaneBladeProjectileManager.Settings settings)
     {
-        settings.baseDamage = 50f;
         Vector3 vec = ApplyZCompensation(settings.direction);
         settings.direction = vec;
-        settings.offset = new Vector3(0f,0.5f,0f);
-        settings.duration *= 1.2f;
+        settings.offset = new Vector3(0f,0.4f,0f); // Projectiles bug with lower y offset for some reason
+        settings.speed *= 1.1f;
+        settings.duration *= 1.1f;
     }
 
     public static Vector3 ApplyZCompensation(Vector3 dir, float maxOffset = 0.2f)
