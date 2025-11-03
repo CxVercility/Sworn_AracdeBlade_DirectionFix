@@ -25,7 +25,7 @@ class Patch
     {
         Vector3 vec = ApplyZCompensation(settings.direction);
         settings.direction = vec;
-        settings.offset = new Vector3(0f,0.4f,0f); // Projectiles bug with lower y offset for some reason
+        settings.offset = new Vector3(0f,1f,0.5f); // Projectiles bug with lower y offset for some reason
         settings.speed *= 1.1f;
         settings.duration *= 1.1f;
     }
