@@ -30,7 +30,7 @@ class Patch
         settings.duration *= 1.1f;
     }
 
-    public static Vector3 ApplyZCompensation(Vector3 dir, float maxOffset = 0.30f)
+    public static Vector3 ApplyZCompensation(Vector3 dir, float maxOffset = 0.25f)
     {
         if (dir == Vector3.zero)
             return dir;
